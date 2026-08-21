@@ -3,76 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Abastecimiento</title>
+    <title>Calculadora de Snacks</title>
 </head>
 <body>
 
     <h1>🍿 Calculadora de Abastecimiento de por Vida</h1>
 
-    <script>
-        // =========================
-        // EJERCICIO 1: SNACKS
-        // =========================
-
-        // Edad actual
-        let edadActual = 16;
-
-        // Edad máxima estimada
-        let edadMaxima = 80;
-
-        // Snack favorito
-        let snack = "papas fritas";
-
-        // Snacks que comeré por día
-        let snacksPorDia = 2;
-
-        // Precio de cada snack
-        let precioSnack = 1000;
-
-        // Calculamos cuántos años quedan
-        let añosRestantes = edadMaxima - edadActual;
-
-        // Calculamos cuántos snacks se necesitan
-        let cantidadFinal = añosRestantes * 365 * snacksPorDia;
-
-        // Calculamos el gasto total
-        let gastoTotal = cantidadFinal * precioSnack;
-
-        // Mostramos los resultados
-        alert(
-            "Necesitarás " + cantidadFinal + " de " + snack +
-            " para que te alcancen hasta los " + edadMaxima + " años."
-        );
-
-        alert(
-            "Vas a gastar $" + gastoTotal +
-            " en " + snack + " a lo largo de tu vida."
-        );
-
-
-        // =========================
-        // EJERCICIO 2: VIAJE
-        // =========================
-
-        // Cantidad de días de viaje
-        let diasDeViaje = 10;
-
-        // Presupuesto máximo
-        let presupuestoMaximo = 300000;
-
-        // Cantidad total de comidas
-        let comidasTotales = 30;
-
-        // Dinero disponible para cada comida
-        let dineroPorComida = presupuestoMaximo / comidasTotales;
-
-        // Mostramos el resultado
-        alert(
-            "Podés gastar $" + dineroPorComida +
-            " en cada comida para que te alcance la plata durante los " +
-            diasDeViaje + " días de viaje."
-        );
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
