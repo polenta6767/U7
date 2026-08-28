@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #ffb347, #ffcc33, #ff914d);
+
+    padding: 20px;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 750px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+    text-align: center;
+
+    animation: aparecer 0.8s ease;
+}
+
+/* Título */
+
+h1 {
+    font-size: 2.3rem;
+    color: #e67e22;
+
+    margin-bottom: 35px;
+}
+
+/* Contenedor de resultados */
+
+.resultado {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cada resultado */
+
+.resultado p {
+    background: #fff7e6;
+
+    border-left: 6px solid #ff9800;
+
+    padding: 22px;
+
+    border-radius: 15px;
+
+    color: #5d4037;
+
+    font-size: 1.15rem;
+    line-height: 1.6;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+
+.resultado p:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Primer resultado */
+
+#cantidad {
+    border-left-color: #f39c12;
+}
+
+/* Segundo resultado */
+
+#gasto {
+    border-left-color: #27ae60;
+}
+
+/* Animación de entrada */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Adaptación para celular */
+
+@media (max-width: 600px) {
+
+    .contenedor {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .resultado p {
+        font-size: 1rem;
+    }
+}

@@ -4,15 +4,24 @@ let snack = "papas fritas";
 let snacksPorDia = 2;
 let precioSnack = 1000;
 
-// Calculamos los años restantes
-let añosRestantes = edadMaxima - edadActual;
+function calcular() {
 
-// Calculamos la cantidad de snacks
-let cantidadFinal = añosRestantes * 365 * snacksPorDia;
+    // Calculamos los años restantes
+    let añosRestantes = edadMaxima - edadActual;
 
-// Calculamos el gasto total
-let gastoTotal = cantidadFinal * precioSnack;
+    // Calculamos la cantidad de snacks
+    let cantidadFinal = añosRestantes * 365 * snacksPorDia;
 
-alert(`Necesitarás ${cantidadFinal} de ${snack} para que te alcancen hasta los ${edadMaxima} años.`);
+    // Calculamos el gasto total
+    let gastoTotal = cantidadFinal * precioSnack;
 
-alert(`Vas a gastar $${gastoTotal} en ${snack} a lo largo de tu vida.`);
+    // Mostramos los resultados
+    document.getElementById("cantidad").textContent =
+        `Necesitarás ${cantidadFinal.toLocaleString()} paquetes de ${snack} para que te alcancen hasta los ${edadMaxima} años.`;
+
+    document.getElementById("gasto").textContent =
+        `Vas a gastar $${gastoTotal.toLocaleString()} en ${snack} a lo largo de tu vida.`;
+}
+
+// Ejecutamos la función al cargar la página
+calcular();
